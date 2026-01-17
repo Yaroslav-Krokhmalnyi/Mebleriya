@@ -28,14 +28,29 @@ function sortCategories(categories) {
     return sa.localeCompare(sb, undefined, { sensitivity: 'base' });
   });
 }
+// function createCategoryOption(category) {
+//   const option = document.createElement('li');
+//   option.innerHTML = `
+//     <button class="our-furniture-category-card" data-category="${category._id}"> <span class="our-furniture-category-card-label">${category.name}</span>
+//     </button>
+//     `;
+//   return option;
+// }
+
 function createCategoryOption(category) {
   const option = document.createElement('li');
   option.innerHTML = `
-    <button class="our-furniture-category-card" data-category="${category._id}"> <span class="our-furniture-category-card-label">${category.name}</span>
-    </button>
+   <button
+  class="our-furniture-category-card"
+  data-category="${category._id}"
+  data-category-name="${category.name}"
+>
+<span class="our-furniture-category-card-label">${category.name}</span>
+</button>
     `;
   return option;
 }
+
 function renderCategoryOptions(categories) {
   categoryContainer.innerHTML =
     '<button class="our-furniture-category-card is-active" style="background-image: url(../img/our-furniture/1-x/all-products.jpg); background-image: image-set(url(../img/our-furniture/1-x/all-products.jpg) 1x, url(../img/our-furniture/2-x/all-products@2x.jpg) 2x);"><span class="our-furniture-category-card-label">Всі товари</span></button></li>';
