@@ -214,27 +214,6 @@ function hideLoader() {
   }
 }
 
-// Відображення зірок
-
-// function createStars() {
-//   document.querySelectorAll('.stars.star-rating').forEach(el => {
-//     el.innerHTML = '';
-//     const score = Number(el.dataset.score || 4);
-
-//     const raty = new Raty(el, {
-//       readOnly: true,
-//       score,
-//       half: true,
-//       starType: 'img',
-//       starOn: 'https://cdn.jsdelivr.net/npm/raty-js/lib/images/star-on.png',
-//       starOff: 'https://cdn.jsdelivr.net/npm/raty-js/lib/images/star-off.png',
-//       starHalf: 'https://cdn.jsdelivr.net/npm/raty-js/lib/images/star-half.png',
-//     });
-
-//     raty.init();
-//   });
-// }
-
 function createStars(el, score) {
   el.innerHTML = '';
   for (let i = 1; i <= 5; i++) {
