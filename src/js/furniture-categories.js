@@ -28,14 +28,6 @@ function sortCategories(categories) {
     return sa.localeCompare(sb, undefined, { sensitivity: 'base' });
   });
 }
-// function createCategoryOption(category) {
-//   const option = document.createElement('li');
-//   option.innerHTML = `
-//     <button class="our-furniture-category-card" data-category="${category._id}"> <span class="our-furniture-category-card-label">${category.name}</span>
-//     </button>
-//     `;
-//   return option;
-// }
 
 function createCategoryOption(category) {
   const option = document.createElement('li');
